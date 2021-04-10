@@ -1,15 +1,12 @@
-var n1 = document.getElementById('numero1')
-const s = (n1 == 2 * Math.PI * raio)
+var form = document.getElementById("formulario");
+var n1 = document.getElementById("numero1");
+var n2 = document.getElementById("numero2");
+let circunferencia;
+form.addEventListener("submit", function (e) {
+  var raio = n1.value / 2;
+  circunferencia = 2 * Math.PI * raio;
+  //const valor = n1.value + 2 * Math.PI * raio;
+});
 
-function calcularCircunferencia(raio) {
-  return (n1 + 2 * Math.PI * raio);
-}
-console.log(calcularCircunferencia(numero1));
-
-
-const p = document.querySelector('#resposta');
-const txt = "A resposta é:"
-const p = txt.replace("A resposta é: ", s)
-
-
-
+var resultado = document.querySelector("#resposta");
+resultado.innerHTML = "resultado é " + circunferencia;
